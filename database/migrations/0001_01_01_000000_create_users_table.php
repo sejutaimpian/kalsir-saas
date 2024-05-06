@@ -17,6 +17,12 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('shop_name');
+            $table->string('logo')->nullable()->default("kalsir.png");
+            $table->string('address');
+            $table->string('profile_picture')->default("admin.png");
+            $table->string('phone_number');
+            $table->string('receipt_note');
             $table->rememberToken();
             $table->timestamps();
         });
